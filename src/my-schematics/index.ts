@@ -1,10 +1,14 @@
 import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 import { execSync } from 'child_process';
+import * as path from 'path';
 
 export function mySchematics(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
     const destinationPath = 'D:/';
     const projectName='ProjectOne';
+    const currentDirectory = __dirname;
+    const schematicsProjectDir = path.join(currentDirectory, '..', '..');
+
     try {
       process.chdir(destinationPath);
 
@@ -14,8 +18,8 @@ export function mySchematics(_options: any): Rule {
 
       process.chdir(projectName);
 
-      //please change location details corresponding to schematics project located in the system
-      execSync(`npm install D:/CodeGeneration/Check/my-schematics/my-schematics/ --save-dev`, { stdio: [0, 1, 2] });
+    
+      execSync(`npm install ${schematicsProjectDir} --save-dev`, { stdio: [0, 1, 2] });
       execSync(`ng generate my-schematics:form-generator`, { stdio: [0, 1, 2] });
 
       execSync(`npm install @angular/material @angular/animations bootstrap`,{ stdio: [0, 1, 2] });
