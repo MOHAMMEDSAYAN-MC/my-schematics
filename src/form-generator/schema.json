@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "form-generator",
+    "title": "Form Generator Options Schema",
+    "description": "Options for the Form Generator Schematic",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "path": {
+        "type": "string",
+        "description": "The path where the component will be created",
+        "default": "src/app"
+      },
+      "projectName": {
+        "type": "string",
+        "description": "The Project Name",
+        "default": "Finalss"
+      }
+    }
+  }
+  
+
+  

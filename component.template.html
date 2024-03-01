@@ -1,0 +1,8 @@
+<!-- my-schematics/src/form-generator/files/component.template.html -->
+<div>
+  <h2>Generated Form</h2>
+  
+  <!-- Generated form fields -->
+  <div *ngFor="let field of htmlCode | json" [innerHTML]="field"></div>
+  
+</div>
