@@ -3,8 +3,8 @@ import { execSync } from 'child_process';
 
 export function mySchematics(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const destinationPath = 'D:/Generated';
-    const projectName='newfinalss';
+    const destinationPath = 'D:/';
+    const projectName='ProjectOne';
     try {
       process.chdir(destinationPath);
 
@@ -14,7 +14,7 @@ export function mySchematics(_options: any): Rule {
 
       process.chdir(projectName);
 
-
+      //please change location details corresponding to schematics project located in the system
       execSync(`npm install D:/CodeGeneration/Check/my-schematics/my-schematics/ --save-dev`, { stdio: [0, 1, 2] });
       execSync(`ng generate my-schematics:form-generator`, { stdio: [0, 1, 2] });
 
