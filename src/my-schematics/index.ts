@@ -4,8 +4,8 @@ import * as path from 'path';
 
 export function mySchematics(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const destinationPath = 'D:/';
-    const projectName='ProjectOne';
+    const destinationPath = 'D:/Generated';
+    const projectName='Projectkooool';
     const currentDirectory = __dirname;
     const schematicsProjectDir = path.join(currentDirectory, '..', '..');
 
@@ -13,7 +13,7 @@ export function mySchematics(_options: any): Rule {
       process.chdir(destinationPath);
 
      
-      execSync(`ng new ${projectName} --style=css --ssr=false --standalone=false`, { stdio: [0, 1, 2] });
+      execSync(`ng new ${projectName} --style=css --ssr=false --standalone=false --skip-install`, { stdio: [0, 1, 2] });
 
 
       process.chdir(projectName);

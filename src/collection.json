@@ -9,14 +9,6 @@
     "my-schematics": {
       "description": "A blank schematic.",
       "factory": "./my-schematics/index#mySchematics"
-    },
-    "car-sc": {
-      "description": "A blank schematic.",
-      "factory": "./car-sc/index#carSc"
-    },
-    "create-pro": {
-      "description": "A blank schematic.",
-      "factory": "./create-pro/index#createPro"
     }
   }
 }
